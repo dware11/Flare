@@ -12,6 +12,7 @@ class ModalityResult:
     explainablity_path: Optional[str] = None    # Grad-CAM or segmentation file
     extra: Optional[Dict[str, Any]] = None      # optional (tumor size, notes, etc)
 
+# Function that fuses results (weights predetermined)
 def fuse_results (ct=None, mri=None, w_ct=0.5, w_mri=0.5): 
     contributors = {}
     final_prediction = 0.0 
